@@ -20,12 +20,12 @@ Planned outcomes:
 ## Repository Structure
 
 CHACHA20/
-├── qr.v # Quarter Round module
-├── tb_qr.v # Testbench for Quarter Round
-├── core.v #  Full ChaCha20 block processor
-├── top.v #  Top-level module with I/O wrapper
-├── tb.v #  Testbench for full integration
-└── README.md # Project documentation
+- qr.v # Quarter Round module
+- tb_qr.v # Testbench for Quarter Round
+- core.v #  Full ChaCha20 block processor
+- top.v #  Top-level module with I/O wrapper
+- tb.v #  Testbench for full integration
+- README.md # Project documentation
 
 
 ---
@@ -38,10 +38,10 @@ Implements one **Quarter Round** operation on four 32-bit state words `a`, `b`, 
 
 The quarter round performs the following sequence:
 
-a += b; d ^= a; d <<< 16;
-c += d; b ^= c; b <<< 12;
-a += b; d ^= a; d <<< 8;
-c += d; b ^= c; b <<< 7;
+- a += b; d ^= a; d <<< 16;
+- c += d; b ^= c; b <<< 12;
+- a += b; d ^= a; d <<< 8;
+- c += d; b ^= c; b <<< 7;
 
 Each line uses:
 - 32-bit modular addition
