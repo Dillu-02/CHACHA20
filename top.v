@@ -1,7 +1,5 @@
 //======================================================================
 // top.v 
-// Top-level wrapper for the ChaCha stream cipher core with clean and
-// descriptive signal naming for clarity and maintainability.
 //======================================================================
 
 module top (
